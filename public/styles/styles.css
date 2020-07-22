@@ -1,3 +1,54 @@
-.list-group-item {
-  line-height: 2.5;
+.login-form {
+  width: 700px;
+  height: auto;
+  margin: auto;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+.login-form h1 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  padding: 20px 0 20px 0;
+  font-weight: bolder;
+  margin-top: 150px;
+}
+.login-form input[type="password"],
+.login-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+  box-sizing:border-box;
+}
+.login-form input[type="submit"] {
+  width: 50%;
+  padding: 12px;
+  background-color: #535b63;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  padding-bottom: 18px;
+}
+  #createaccount {
+  width: 50%;
+  padding: 19px;
+  font-size: 10px;
+  background-color: white;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  color:blue;
+}
+
+#landingPage {
+  background-image: url(https://www.publicdomainpictures.net/pictures/30000/velka/film-background-1334067869u9d.jpg);
+}
+
+#loginBox {
+  background-color: rgb(190, 224, 240);
+  padding: 80px 100px;
+  width: 100%;
 }
