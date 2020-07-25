@@ -36,3 +36,7 @@ Responsibilities
 DB
 Have a PW model - a user has many passwords
 Use an implicit join for the tables
+are we goint to use sequelize or write our own sql with ORM, may be better to build with 
+use
+validate with sequelize; like email
+ADD DISCLAIMER
