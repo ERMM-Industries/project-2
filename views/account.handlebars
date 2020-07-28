@@ -101,7 +101,7 @@ create_azle(function() {
         "width": "100px",
         "padding": "20px"
     })
-    hold_titles = ['Home', 'TV Shows', 'Movies', 'Recently Added', 'My List']
+    hold_titles = ['Home', 'Watchlist', 'Reviewed', 'Updates']
     az.call_multiple({
         "iterations": hold_titles.length,
         "function": `
@@ -141,14 +141,7 @@ create_azle(function() {
         "this_class": "op_icons",
         "icon_class": "fa-search"
     })
-    az.add_text('icons_layout_cells', 2, {
-        "this_class": "kids",
-        "text": "KIDS"
-    })
-    az.style_text('kids', 1, {
-        "color": "white",
-        "margin-right": "25px"
-    })
+    
     az.add_icon('icons_layout_cells', 3, {
         "this_class": "op_icons",
         "icon_class": "fa-bell"
@@ -254,7 +247,7 @@ create_azle(function() {
 
 
 
-    /*az.call_multiple({
+    az.call_multiple({
         "iterations": 10,
         "function": `
             index_ = index
@@ -279,7 +272,7 @@ create_azle(function() {
             })
 
             `
-    })*/
+    })
 
     az.call_once_satisfied({
         "condition" : "az.check_exists('scroll_posters', 11)",
