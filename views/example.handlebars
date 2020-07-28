@@ -9,42 +9,36 @@
         
 		<body>
 <style>body {
-  font-family: "Lato", sans-serif;
+background: #141414;
 }
-
-.sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
+#hold_images {
+display: inline-block; 
+white-space: nowrap;
 }
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+#icon_right {
+right: 20; 
+cursor: pointer;  
+margin-top: -200px; 
+position: fixed; 
 }
-
-.sidenav a:hover {
-  color: #f1f1f1;
+#icon_left {
+left: 20; 
+cursor: pointer;  
+margin-top: -200px; 
+position: fixed; 
 }
-
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+img {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    cursor: pointer; 
 }</style>
 
 <div class="sidenav">
@@ -55,20 +49,52 @@
   <a href="#contact">Contact</a>
 </div>
 
-<div class="main">
-  <h2>Sidebar</h2>
-  <p>This sidebar is of full height (100%) and always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-</div>
+<div id='hold_images'></div>
+
    
 </body>
 </html> 
 
 	</body>
+
+  <script>images = {
+   "1" : "img/1.png",
+   "2" : "img/2.png",
+   "3" : "img/3.png",
+   "4" : "img/4.png",
+   "5" : "img/5.png",
+   "6" : "img/6.png",
+   "7" : "img/7.png",
+   "8" : "img/8.png",
+   "9" : "img/9.png",
+   "10" : "img/10.png"
+}
+
+Object.keys(images).forEach(function(path) {
+    $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
+});
+
+$('body').append("<i id='icon_right'></i>");
+$('body').append("<i id='icon_left'></i>"); 
+add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
+add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
+
+$(document).ready(function(){
+    $('.my_img').hover(function() {
+        $(this).addClass('transition');
+
+    }, function() {
+        $(this).removeClass('transition');
+    });
+});
+
+$(document).on('click', '#icon_right, #icon_left', function() {
+    if($(this).attr('id') == 'icon_right') {
+        $('body').animate({scrollLeft: 1000}, 800);
+        } else {
+        $('body').animate({scrollLeft: -1000}, 800);
+    }
+});</script>
 </html>
 
 

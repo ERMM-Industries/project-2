@@ -56,7 +56,11 @@
   <a href="#watchlist">Watchlist</a>
   <a href="#contact">Contact</a>
 </div>
-<script>  
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <script>  
 
 create_azle(function() {
     az.style_body({
@@ -250,7 +254,7 @@ create_azle(function() {
 
 
 
-    az.call_multiple({
+    /*az.call_multiple({
         "iterations": 10,
         "function": `
             index_ = index
@@ -275,7 +279,7 @@ create_azle(function() {
             })
 
             `
-    })
+    })*/
 
     az.call_once_satisfied({
         "condition" : "az.check_exists('scroll_posters', 11)",
@@ -306,6 +310,16 @@ function add_icon_events() {
 }
 
 </script>
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
+
    
 </body>
 </html> 

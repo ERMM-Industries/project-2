@@ -5,10 +5,12 @@
 		<title>FILMSNOB</title>
         <link rel="stylesheet" href="/styles/styles.css">
 	</head>
-	<body id="filmPage">
+	<body id="examplePage">
         
 		<body>
-<style>body {
+<style>
+    
+   body {
   font-family: "Lato", sans-serif;
 }
 
@@ -45,6 +47,39 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+} 
+
+    body {
+background: #141414;
+}
+#hold_images {
+display: inline-block; 
+white-space: nowrap;
+}
+#icon_right {
+right: 20; 
+cursor: pointer;  
+margin-top: -200px; 
+position: fixed; 
+}
+#icon_left {
+left: 20; 
+cursor: pointer;  
+margin-top: -200px; 
+position: fixed; 
+}
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+img {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    cursor: pointer; 
 }</style>
 
 <div class="sidenav">
@@ -55,20 +90,52 @@
   <a href="#contact">Contact</a>
 </div>
 
-<div class="main">
-  <h2>Sidebar</h2>
-  <p>This sidebar is of full height (100%) and always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-</div>
+<div id='hold_images'></div>
+
    
 </body>
 </html> 
 
 	</body>
+
+  <script>images = {
+   "1" : "../public/styles/img/1.jpg",
+   "2" : "../public/styles/img/2.jpg",
+   "3" : "img/3.png",
+   "4" : "img/4.png",
+   "5" : "img/5.png",
+   "6" : "img/6.png",   
+   "7" : "img/7.png",
+   "8" : "img/8.png",
+   "9" : "img/9.png",
+   "10" : "img/10.png"
+}
+
+Object.keys(images).forEach(function(path) {
+    $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
+});
+
+$('body').append("<i id='icon_right'></i>");
+$('body').append("<i id='icon_left'></i>"); 
+add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
+add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
+
+$(document).ready(function(){
+    $('.my_img').hover(function() {
+        $(this).addClass('transition');
+
+    }, function() {
+        $(this).removeClass('transition');
+    });
+});
+
+$(document).on('click', '#icon_right, #icon_left', function() {
+    if($(this).attr('id') == 'icon_right') {
+        $('body').animate({scrollLeft: 1000}, 800);
+        } else {
+        $('body').animate({scrollLeft: -1000}, 800);
+    }
+});</script>
 </html>
 
 
