@@ -26,8 +26,10 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `actors` varchar(500) NOT NULL,
   `date of release` varchar(50) NOT NULL,
   `plot summary` varchar(10000) NOT NULL,
-  `account status` varchar(100) NOT NULL,
-  `awards` varchar(20) NOT NULL
+  `movie status` varchar(100) NOT NULL,
+  `awards` varchar(20) NOT NULL,
+  `Watch Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  `Review Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 ALTER TABLE `accounts` ADD PRIMARY KEY (`id`);
