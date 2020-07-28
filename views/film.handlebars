@@ -13,7 +13,7 @@
 <style>
     
    body {
-  font-family: "Lato", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .sidenav {
@@ -82,7 +82,13 @@ img {
     -o-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
     cursor: pointer; 
-}</style>
+}
+
+.card-img-top {
+    width: 50%;
+    height: 15vw;
+}
+</style>
 
 <div class="sidenav">
   <a href="#fellowSnobs">FellowSnobs</a>
@@ -92,7 +98,77 @@ img {
   <a href="#contact">Contact</a>
 </div>
 
-<div id='hold_images'></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6">
+      <div class="card" style="width: 40rem; ">
+  <img src="https://www.indiewire.com/wp-content/uploads/2019/06/slack-imgs-6.jpg?w=716;" id="film_poster" class="card-img-top;" alt="FilmSnob">
+  <div class="card text-center">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" id="film_title">{Film title to populate here}</h5>
+    <a href="#" class="btn btn-primary">Add to watchlist</a>
+  </div>
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Add award
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Oscar worthy</a>
+    <a class="dropdown-item" href="#">Blockbuster</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<br>
+  <div class="card-footer" id="production">
+    {produced by goes here}
+  </div>
+</div>
+  <div class="card-body">
+    <h5 class="plot">Plot Summary</h5>
+    <p class="plot_summary">{movie summary will go here}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Release date: <p class="release_date">{release date to populate here}</p></li>
+    <br>
+    <li class="list-group-item">Film rating: <p class="film_rating">{film rating here}</p></li>
+    <br>
+    <li class="list-group-item">Director: <p class="director">{director goes here}</p></li>
+    <br>
+    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+    <br>
+    <li class="list-group-item">Run time: <p class="run_time">{run time goes here}</p></li>
+    <br>
+    <li class="list-group-item">Budget: <p class="actors">{actors list goes here}</p></li>
+    <br>
+    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+    </div>
+    </div>
+    <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12">
+      <div id='hold_images'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12">
+      One of three columns
+    </div>
+    </div>
+  </div>
+</div>
+
+
 
    
 </body>
@@ -100,10 +176,11 @@ img {
 
 	</body>
 
-  <script>
+
+  {{!-- <script>
     images = {
-   "1" : "./public/styles/img/1.jpg",
-   "2" : "./public/styles/img/2.jpg",
+   "1" : "../public/styles/img/1.jpg",
+   "2" : "../public/styles/img/2.jpg",
    "3" : "img/3.png",
    "4" : "img/4.png",
    "5" : "img/5.png",
@@ -138,7 +215,7 @@ $(document).on('click', '#icon_right, #icon_left', function() {
         } else {
         $('body').animate({scrollLeft: -1000}, 800);
     }
-});</script>
+});</script> --}}
 </html>
 
 

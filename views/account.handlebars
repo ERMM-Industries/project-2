@@ -74,10 +74,12 @@ create_azle(function() {
     az.all_style_sections('my_sections', {
         "flush": "true",
         "background": "#141414",
-        "height": "auto"
+        "height": "auto",
+        "width": "900px"
     })
     az.style_sections('my_sections', 1, {
         "height": "50px",
+        "width": "900px",
         "background": "#141414"
     })
     az.add_layout('my_sections', 1, {
@@ -133,7 +135,7 @@ create_azle(function() {
     })
     az.style_layout('icons_layout', 1, {
         "height": "auto",
-        "width": "auto",
+        "width": "900px",
         "margin-top": "15px",
         "border": 0
     })
@@ -172,7 +174,7 @@ create_azle(function() {
     az.style_layout('poster_layout', 1, {
         "column_widths": ['1%', '99%', '1%'],
         "height": "200px",
-        "width": "95%",
+        "width": "900px",
         "align": "center",
         "border": 0
     })
@@ -198,7 +200,8 @@ create_azle(function() {
     })
     az.add_scrollable_container('poster_layout_cells', 2, {
         "this_class": "scroll_posters",
-        "direction": "horizontal"
+        "direction": "horizontal",
+        "width": "auto"
     })
     az.add_event('scroll_icons', 1, {
         "type": "click",
@@ -248,7 +251,7 @@ create_azle(function() {
 
 
     az.call_multiple({
-        "iterations": 10,
+        "iterations": 2,
         "function": `
             index_ = index
             az.clone_layout('my_sections', 4, {
