@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FILMSNOB</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <script src='http://azlejs.com/v2/azle.min.js'></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	</head>
+	<body id="accountPage">
+        
+		<body>
+<style>body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}</style>
+
+<div class="sidenav">
+  <a href="#fellowSnobs">FellowSnobs</a>
+
+  <a href="#awards">Awards</a>
+  <a href="#watchlist">Watchlist</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <script>  
+
+create_azle(function() {
+    az.style_body({
+        "background": "#141414",
+        "font-family": "Arial"
+    })
+    az.add_sections({
+        "this_class": "my_sections",
+        "sections": 4
+    })
+    az.all_style_sections('my_sections', {
+        "flush": "true",
+        "background": "#141414",
+        "height": "auto",
+        "width": "900px"
+    })
+    az.style_sections('my_sections', 1, {
+        "height": "50px",
+        "width": "900px",
+        "background": "#141414"
+    })
+    az.add_layout('my_sections', 1, {
+        "this_class": "top_pane_layout",
+        "row_class": "top_pane_layout_rows",
+        "cell_class": "top_pane_layout_cells",
+        "number_of_rows": 1,
+        "number_of_columns": 3
+    })
+    az.style_layout('top_pane_layout', 1, {
+        "height": "50px",
+        "column_widths": ['10%', '50%', '40%'],
+        "margin-top": "-10px",
+        "border": 0
+    })
+    az.add_image('top_pane_layout_cells', 1, {
+        "this_class": "netflix_logo",
+        "image_path": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png"
+    })
+    az.style_image('netflix_logo', 1, {
+        "width": "100px",
+        "padding": "20px"
+    })
+    hold_titles = ['Home', 'Watchlist', 'Reviewed', 'Updates']
+    az.call_multiple({
+        "iterations": hold_titles.length,
+        "function": `
+            az.add_text('top_pane_layout_cells', 2, {
+                "this_class" : "titles", 
+                "text" : hold_titles[index]
+            })
+            az.all_style_text('titles', {
+                "color" : "white",
+                "display" : "inline-block",
+                "margin-right" : "4px",
+                "margin-bottom" : "1px",
+                "cursor" : "pointer"
+            })
+            az.style_text('titles', 1, {
+                "font-weight" : "bold"
+            })
+        `
+    })
+    az.style_layout('top_pane_layout_cells', 3, {
+        "align": "right"
+    })
+    az.add_layout('top_pane_layout_cells', 3, {
+        "this_class": "icons_layout",
+        "row_class": "icons_layout_rows",
+        "cell_class": "icons_layout_cells",
+        "number_of_rows": 1,
+        "number_of_columns": 4
+    })
+    az.style_layout('icons_layout', 1, {
+        "height": "auto",
+        "width": "900px",
+        "margin-top": "15px",
+        "border": 0
+    })
+    az.add_icon('icons_layout_cells', 1, {
+        "this_class": "op_icons",
+        "icon_class": "fa-search"
+    })
+    
+    az.add_icon('icons_layout_cells', 3, {
+        "this_class": "op_icons",
+        "icon_class": "fa-bell"
+    })
+    az.add_icon('icons_layout_cells', 4, {
+        "this_class": "op_icons",
+        "icon_class": "fa-smile-o"
+    })
+    az.all_style_icon('op_icons', {
+        "color": "white",
+        "font-size": "20px",
+        "margin-right": "25px",
+        "cursor" : "pointer"
+    })
+    az.add_html('my_sections', 2, {
+        "html": "<iframe class='youtube' width='80%' height='500px' src='https://www.youtube.com/embed/y3GLhAumiec?autoplay=1&mute=1&enablejsapi=1' frameborder='0'></iframe>",
+        "align": "center"
+    })
+    az.style_html('youtube', 1, {
+        "margin-top": "-30px"
+    })
+    az.add_layout('my_sections', 3, {
+        "this_class": "poster_layout",
+        "row_class": "poster_layout_rows",
+        "cell_class": "poster_layout_cells",
+        "number_of_rows": 1,
+        "number_of_columns": 3
+    })
+    az.style_layout('poster_layout', 1, {
+        "column_widths": ['1%', '99%', '1%'],
+        "height": "200px",
+        "width": "900px",
+        "align": "center",
+        "border": 0
+    })
+    az.add_icon('poster_layout_cells', 1, {
+        "this_class": "scroll_icons",
+        "icon_class": "fa-chevron-left"
+    })
+    az.add_icon('poster_layout_cells', 3, {
+        "this_class": "scroll_icons",
+        "icon_class": "fa-chevron-right"
+    })
+    az.style_icon('scroll_icons', 1, {
+        "color": "white",
+        "font-size": "30px",
+        "cursor": "pointer",
+        "float": "left"
+    })
+    az.style_icon('scroll_icons', 2, {
+        "color": "white",
+        "font-size": "30px",
+        "cursor": "pointer",
+        "float": "right"
+    })
+    az.add_scrollable_container('poster_layout_cells', 2, {
+        "this_class": "scroll_posters",
+        "direction": "horizontal",
+        "width": "auto"
+    })
+    az.add_event('scroll_icons', 1, {
+        "type": "click",
+        "function": `
+            az.scroll_container('scroll_posters', 1, {
+                "direction" : "left"
+            })        
+        `
+    })
+    az.add_event('scroll_icons', 2, {
+        "type": "click",
+        "function": `
+            az.scroll_container('scroll_posters', 1, {
+                "direction" : "right"
+            })        
+        `
+    })
+    images = ["https://ninertimes.com/wp-content/uploads/2018/02/AC_Vertical-Kovacs_Stacks_SF_CYMK-1.jpg", "https://ih0.redbubble.net/image.514070091.0037/flat,550x550,075,f.u1.jpg", "https://m.media-amazon.com/images/M/MV5BZWVmYjJlZjgtMzU4YS00MDQxLWJmYjQtNTcyMjJkMDNmOTZkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg", "https://m.media-amazon.com/images/M/MV5BMTU0MjQxNjk3Ml5BMl5BanBnXkFtZTgwOTM3NzY0NDM@._V1_UY1200_CR90,0,630,1200_AL_.jpg", "https://occ-0-114-116.1.nflxso.net/art/a5dd9/9c52249f2f8b67b8675e4e04e4b2f4ed0b1a5dd9.jpg", "https://i.pinimg.com/originals/05/69/2e/05692ee220479771424cb42f8c07fc75.jpg", "https://i.pinimg.com/736x/d5/15/68/d51568eddb6dddd5e1e43febaafa7f15.jpg", "https://m.media-amazon.com/images/M/MV5BMzhhMTczMDQtNWE0Yy00OTJiLTlmYjgtNWU1MmVkYTVlYWVhXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg", "https://radradio.com/wp-content/uploads/DTbv7yDX0AI1GJl.jpg", "https://m.media-amazon.com/images/M/MV5BMjQ3OWNlNDAtODZlOS00Y2NhLThiNTEtMWI4MWFkMTZjMGUzXkEyXkFqcGdeQXVyODQ1NTk5OQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"]
+    az.call_multiple({
+        "iterations": images.length,
+        "function": `
+            index_ = index
+            img_path = images[index_]
+            az.add_button('scroll_posters', 1, {
+                "this_class" : "movie_posters",
+                "text" : ""
+            })
+            az.style_button('movie_posters', index_+1, {
+                "width" : "200px",
+                "height" : "300px",
+                "margin-right" : "10px",
+                "background" : "url(" + img_path + ") no-repeat",
+                "background-size" : "200px 300px"
+            })
+            az.all_add_event('movie_posters', {
+                "type" : "hover",
+                "function" : "az.style_button('movie_posters', az.get_target_instance(this.id), {'transform' : 'scale(1.2)', '-webkit-transition' : 'all .4s ease-in-out'})"
+            })
+            az.all_add_event('movie_posters', {
+                "type" : "unhover",
+                "function" : "az.style_button('movie_posters', az.get_target_instance(this.id), {'transform' : 'scale(1)', '-webkit-transition' : 'all .2s ease-in-out'})"
+            })
+        `
+    })
+    // repeat slider to mimic genres
+
+
+
+    az.call_multiple({
+        "iterations": 2,
+        "function": `
+            index_ = index
+            az.clone_layout('my_sections', 4, {
+                "copy_class" : "poster_layout",
+                "copy_instance" : 1,
+                "this_class" : "poster_layout_clone",
+                "row_class" : "poster_layout_clone_rows",
+                "cell_class" : "poster_layout_clone_cells"
+            })
+
+            az.all_style_layout('poster_layout_clone', {
+                "align" : "center"
+            })
+            az.all_add_event('movie_posters', {
+                "type" : "hover",
+                "function" : "az.style_button('movie_posters', az.get_target_instance(this.id), {'transform' : 'scale(1.2)', '-webkit-transition' : 'all .4s ease-in-out'})"
+            })
+            az.all_add_event('movie_posters', {
+                "type" : "unhover",
+                "function" : "az.style_button('movie_posters', az.get_target_instance(this.id), {'transform' : 'scale(1)', '-webkit-transition' : 'all .2s ease-in-out'})"
+            })
+
+            `
+    })
+
+    az.call_once_satisfied({
+        "condition" : "az.check_exists('scroll_posters', 11)",
+        "function" : "add_icon_events()"
+    })
+
+})
+
+function add_icon_events() {
+    az.call_every({
+        "every" : 100, 
+        "function" : `
+            index_ = index
+            az.add_event('scroll_icons', (index_*2) + 3, {
+                "type": "click",
+                "function": "az.scroll_container('scroll_posters', " + (index_ + 2) + ", {'direction' : 'left'})"        
+            })
+            az.add_event('scroll_icons', (index_*2) + 4, {
+                "type": "click",
+                "function": "az.scroll_container('scroll_posters', " + (index_ + 2) + ", {'direction' : 'right'})"
+            })
+        `
+    })
+    az.delay_event({
+        "delay" : 2000,
+        "function" : "az.stop_call_every()"
+    })
+}
+
+</script>
+    </div>
+    <div class="col-sm-2"></div>
+    </div>
+    <div class="row">   
+    <div class="col-sm-2"></div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
+
+   
+</body>
+</html> 
+
+	</body>
+</html>
+
+

@@ -22,11 +22,73 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/account", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("account", {
+        examples: dbExamples
+      });
+    });
+  });
+
   app.get("/account/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(
       dbExample
     ) {
       res.render("account", {
+        example: dbExample
+      });
+    });
+  });
+
+  app.get("/film", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("film", {
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/film/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("film", {
+        example: dbExample
+      });
+    });
+  });
+
+  app.get("/reviewed/", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("reviewed", {
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/reviewed/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("reviewed", {
+        example: dbExample
+      });
+    });
+  });
+
+  app.get("/watchlist", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("watchlist", {
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/watchlist/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("watchlist", {
         example: dbExample
       });
     });
