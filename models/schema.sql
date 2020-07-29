@@ -27,7 +27,8 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `release_date` varchar(50) NOT NULL,
   `plot_summary` varchar(10000) NOT NULL,
   `account_status` varchar(100) NOT NULL,
-  `awards` varchar(20) NOT NULL
+  `awards` varchar(20) NOT NULL,
+  'poster' varchar (1000) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 ALTER TABLE `accounts` ADD PRIMARY KEY (`id`);
