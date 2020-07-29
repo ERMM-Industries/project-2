@@ -13,7 +13,8 @@
 	<body id="accountPage">
         
 		<body>
-<style>body {
+<style>
+body {
   font-family: "Lato", sans-serif;
 }
 
@@ -30,15 +31,10 @@
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 3px 5px 3px 13px;
   text-decoration: none;
-<<<<<<< HEAD
-  font-size: 25px;
-  color: #f3f3f3;
-=======
-  font-size: 18px;
+  font-size: 16px;
   color: #818181;
->>>>>>> 9f91153c2e0128f327c0727f7f450c4bd9c4e7ec
   display: block;
 }
 
@@ -50,13 +46,14 @@
     width: 90%;
 }
 
+#sideNavSub {
+    font-size: 10px;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-<<<<<<< HEAD
-</style>
-=======
 
 .navbar {
   font-size: 18px;
@@ -76,10 +73,10 @@
         <a class="nav-link" href="/account">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/watchlist">Watchlist</a>
+        <a class="nav-link" href="/film/:id">Watchlist</a>
       </li>
           <li class="nav-item">
-        <a class="nav-link" href="/reviewed">Reviews</a>
+        <a class="nav-link" href="/revieweded">revieweds</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/community">Community</a>
@@ -96,14 +93,22 @@
     </form>
   </div>
 </nav>
->>>>>>> 9f91153c2e0128f327c0727f7f450c4bd9c4e7ec
 
 <div class="sidenav">
-  <a href="#fellowSnobs">FellowSnobs</a>
-
-  <a href="#awards">Awards</a>
-  <a href="#watchlist">Watchlist</a>
-  <a href="#contact">Contact</a>
+  <a href="/account">Billy Mayes</a>
+  <a href="/community">FellowSnobs</a>
+  <a href="/reviewed">Awards</a>
+  <a id="sideNavSub" href="/reviewed/:id">Oscar Worthy: <p id="oscarWorthyCount">2</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Blockbuster: <p id="blockbusterCount">4</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Collecting Dust: <p id="collDustCount">1</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Bargain Bin: <p id="bargBinCount">5</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Dumpster Fire: <p id="dumpFiCount">9</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Walked Out: <p id="walkOutCount">15</p></a>
+  <a href="/watchlist">Watchlist</a>
+  <a id="sideNavSub" href="/film/:id">1. <p id="oneWatch">Casablanca</p></a>
+  <a id="sideNavSub" href="/film/:id">2. <p id="twoWatch">Blade Runner 2049</p></a>
+<a id="sideNavSub" href="/film/:id">3. <p id="threeWatch">Visitor Q</p></a>
+  
 </div>
 
 <div class="container">
@@ -146,14 +151,14 @@ create_azle(function() {
         "border": 0
     })
     az.add_image('top_pane_layout_cells', 1, {
-        "this_class": "netflix_logo",
-        "image_path": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png"
+        "this_class": "filmSnob_logo",
+        "image_path": ""
     })
     az.style_image('netflix_logo', 1, {
         "width": "100px",
         "padding": "20px"
     })
-    hold_titles = ['Home', 'Watchlist', 'Reviewed', 'Updates']
+    hold_titles = ['Home', 'Watchlist', 'revieweded', 'Updates']
     az.call_multiple({
         "iterations": hold_titles.length,
         "function": `
@@ -209,7 +214,7 @@ create_azle(function() {
         "cursor" : "pointer"
     })
     az.add_html('my_sections', 2, {
-        "html": "<iframe class='youtube' width='80%' height='500px' src='https://www.youtube.com/embed/y3GLhAumiec?autoplay=1&mute=1&enablejsapi=1' frameborder='0'></iframe>",
+        "html": "<iframe class='youtube' width='80%' height='500px' src='https://www.youtube.com/embed/haXvp8M9Cog?autoplay=1&mute=1&enablejsapi=1' frameborder='0'></iframe>",
         "align": "center"
     })
     az.style_html('youtube', 1, {

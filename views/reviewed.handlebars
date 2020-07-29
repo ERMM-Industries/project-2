@@ -10,10 +10,12 @@
 
         
 	</head>
-<body id="reviewPage">
+<body id="reviewedPage">
     <style>
 body {
   font-family: "Lato", sans-serif;
+  background: #141414;
+
 }
 
 .sidenav {
@@ -29,9 +31,9 @@ body {
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 3px 5px 3px 13px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   color: #818181;
   display: block;
 }
@@ -44,6 +46,10 @@ body {
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
+}
+
+#sideNavSub {
+    font-size: 10px;
 }
 
 @media screen and (max-height: 450px) {
@@ -93,7 +99,7 @@ body {
         <a class="nav-link" href="/watchlist">Watchlist</a>
       </li>
           <li class="nav-item">
-        <a class="nav-link" href="/reviewed">Reviews</a>
+        <a class="nav-link" href="/revieweded">revieweds</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/community">Community</a>
@@ -111,13 +117,21 @@ body {
   </div>
 </nav>
 
-        <div class="sidenav">
-            <a href="#fellowSnobs">FellowSnobs</a>
-
-            <a href="#awards">Awards</a>
-            <a href="#watchlist">Watchlist</a>
-            <a href="#contact">Contact</a>
-        </div>
+<div class="sidenav">
+  <a href="/account">Billy Mayes</a>
+  <a href="/community">FellowSnobs</a>
+  <a href="/reviewed">Awards</a>
+  <a id="sideNavSub" href="/reviewed/:id">Oscar Worthy: <p id="oscarWorthyCount">2</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Blockbuster: <p id="blockbusterCount">4</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Collecting Dust: <p id="collDustCount">1</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Bargain Bin: <p id="bargBinCount">5</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Dumpster Fire: <p id="dumpFiCount">9</p></a>
+  <a id="sideNavSub" href="/reviewed/:id">Walked Out: <p id="walkOutCount">15</p></a>
+  <a href="/watchlist">Watchlist</a>
+  <a id="sideNavSub" href="/film/:id">1. <p id="oneWatch">Casablanca</p></a>
+  <a id="sideNavSub" href="/film/:id">2. <p id="twoWatch">Blade Runner 2049</p></a>
+  <a id="sideNavSub" href="/film/:id">3. <p id="threeWatch">Visitor Q</p></a>
+</div>
         
 <div class="container">
     <div class="row">
