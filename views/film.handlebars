@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FILMSNOB</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body id="examplePage">
+        
+		<body>
+<style>
+    
+   body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+    body {
+background: #141414;
+}
+#hold_images {
+display: inline-block; 
+white-space: nowrap;
+}
+#icon_right {
+right: 20; 
+cursor: pointer;  
+margin-top: -200px; 
+position: fixed; 
+}
+#icon_left {
+left: 20; 
+cursor: pointer;  
+margin-top: -200px; 
+position: fixed; 
+}
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+img {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    cursor: pointer; 
+}
+
+.card-img-top {
+    width: 50%;
+    height: 15vw;
+}
+</style>
+
+<div class="sidenav">
+  <a href="#fellowSnobs">FellowSnobs</a>
+
+  <a href="#awards">Awards</a>
+  <a href="#watchlist">Watchlist</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6">
+      <div class="card" style="width: 40rem; ">
+  <img src="https://www.indiewire.com/wp-content/uploads/2019/06/slack-imgs-6.jpg?w=716;" id="film_poster" class="card-img-top;" alt="FilmSnob">
+  <div class="card text-center">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" id="film_title">{Film title to populate here}</h5>
+    <a href="#" class="btn btn-primary">Add to watchlist</a>
+  </div>
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Add award
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Oscar worthy</a>
+    <a class="dropdown-item" href="#">Blockbuster</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<br>
+  <div class="card-footer" id="production">
+    {produced by goes here}
+  </div>
+</div>
+  <div class="card-body">
+    <h5 class="plot">Plot Summary</h5>
+    <p class="plot_summary">{movie summary will go here}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Release date: <p class="release_date">{release date to populate here}</p></li>
+    <br>
+    <li class="list-group-item">Film rating: <p class="film_rating">{film rating here}</p></li>
+    <br>
+    <li class="list-group-item">Director: <p class="director">{director goes here}</p></li>
+    <br>
+    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+    <br>
+    <li class="list-group-item">Run time: <p class="run_time">{run time goes here}</p></li>
+    <br>
+    <li class="list-group-item">Budget: <p class="actors">{actors list goes here}</p></li>
+    <br>
+    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+    </div>
+    </div>
+    <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12">
+      <div id='hold_images'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12">
+      One of three columns
+    </div>
+    </div>
+  </div>
+
+
+
+   
+</body>
+</html> 
+
+	</body>
+
+
+  {{!-- <script>
+    images = {
+   "1" : "../public/styles/img/1.jpg",
+   "2" : "../public/styles/img/2.jpg",
+   "3" : "img/3.png",
+   "4" : "img/4.png",
+   "5" : "img/5.png",
+   "6" : "img/6.png",   
+   "7" : "img/7.png",
+   "8" : "img/8.png",
+   "9" : "img/9.png",
+   "10" : "img/10.png"
+}
+
+Object.keys(images).forEach(function(path) {
+    $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
+});
+
+$('body').append("<i id='icon_right'></i>");
+$('body').append("<i id='icon_left'></i>"); 
+add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
+add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
+
+$(document).ready(function(){
+    $('.my_img').hover(function() {
+        $(this).addClass('transition');
+
+    }, function() {
+        $(this).removeClass('transition');
+    });
+});
+
+$(document).on('click', '#icon_right, #icon_left', function() {
+    if($(this).attr('id') == 'icon_right') {
+        $('body').animate({scrollLeft: 1000}, 800);
+        } else {
+        $('body').animate({scrollLeft: -1000}, 800);
+    }
+});</script> --}}
+</html>
+
+
