@@ -17,11 +17,11 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `first name` varchar(50) NOT NULL,
-  `last name` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
   `birthday` varchar(50) NOT NULL,
-  `film title` varchar(100) NOT NULL,
-  `film rating` varchar(20) NOT NULL,
+  `film_title` varchar(100) NOT NULL,
+  `film_rating` varchar(20) NOT NULL,
   `director` varchar(50) NOT NULL,
   `actors` varchar(500) NOT NULL,
   `date of release` varchar(50) NOT NULL,
@@ -30,6 +30,10 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `awards` varchar(20) NOT NULL,
   `Watch Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   `Review Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  `release_date` varchar(50) NOT NULL,
+  `plot_summary` varchar(10000) NOT NULL,
+  `account_status` varchar(100) NOT NULL,
+  `awards` varchar(20) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 ALTER TABLE `accounts` ADD PRIMARY KEY (`id`);
