@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "TheMatrix11!",
+    "password": "",
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "TheMatrix11!",
+    "password": "",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
