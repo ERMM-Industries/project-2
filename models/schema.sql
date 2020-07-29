@@ -25,9 +25,16 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `director` varchar(50) NOT NULL,
   `actors` varchar(500) NOT NULL,
   `release_date` varchar(50) NOT NULL,
+  `plot summary` varchar(10000) NOT NULL,
+  `movie_status` varchar(100) NOT NULL,
+  `awards` varchar(20) NOT NULL,
+  `watch_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  `review_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  `release_date` varchar(50) NOT NULL,
   `plot_summary` varchar(10000) NOT NULL,
   `account_status` varchar(100) NOT NULL,
-  `awards` varchar(20) NOT NULL
+  `awards` varchar(20) NOT NULL,
+  'poster' varchar (1000) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 ALTER TABLE `accounts` ADD PRIMARY KEY (`id`);

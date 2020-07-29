@@ -3,9 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>FILMSNOB</title>
-        <link rel="stylesheet" href="/styles/styles.css">
         <script src='http://azlejs.com/v2/azle.min.js'></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../public/styles/styles.css">
 	</head>
 	<body id="accountPage">
         
@@ -30,7 +33,7 @@
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #f3f3f3;
   display: block;
 }
 
@@ -38,11 +41,15 @@
   color: #f1f1f1;
 }
 
+.poster_layout_cells {
+    width: 90%;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}</style>
+}
+</style>
 
 <div class="sidenav">
   <a href="#fellowSnobs">FellowSnobs</a>
@@ -159,7 +166,8 @@ create_azle(function() {
         "align": "center"
     })
     az.style_html('youtube', 1, {
-        "margin-top": "-30px"
+        "margin-top": "-30px",
+        "margin-left": "200px"
     })
     az.add_layout('my_sections', 3, {
         "this_class": "poster_layout",
@@ -169,16 +177,24 @@ create_azle(function() {
         "number_of_columns": 3
     })
     az.style_layout('poster_layout', 1, {
-        "column_widths": ['1%', '99%', '1%'],
+        {{!-- "column_widths": ['1%', '30%', '1%'], --}}
         "height": "200px",
-        "width": "900px",
+        "width": "1200px",
         "align": "center",
         "border": 0
     })
+
+    az.style_layout('poster_layout_cells', 2, {
+        {{!-- "column_widths": ['1%', '30%', '1%'], --}}
+        "height": "200px",
+        "width": "100%",
+    })
+    
     az.add_icon('poster_layout_cells', 1, {
         "this_class": "scroll_icons",
         "icon_class": "fa-chevron-left"
     })
+
     az.add_icon('poster_layout_cells', 3, {
         "this_class": "scroll_icons",
         "icon_class": "fa-chevron-right"
@@ -198,8 +214,14 @@ create_azle(function() {
     az.add_scrollable_container('poster_layout_cells', 2, {
         "this_class": "scroll_posters",
         "direction": "horizontal",
-        "width": "auto"
+        "width": "100%",
     })
+
+    az.style_layout('scroll_posters', 1, {
+         "width": "1000px",
+         "margin-left": "-300px"
+    })
+
     az.add_event('scroll_icons', 1, {
         "type": "click",
         "function": `
@@ -245,7 +267,11 @@ create_azle(function() {
     })
     // repeat slider to mimic genres
 
-
+    az.style_layout('movie_posters', 1, {
+         "padding": "0px",
+         "margin": "0px",
+         "width": "10px"
+    })
 
     az.call_multiple({
         "iterations": 2,
@@ -303,22 +329,9 @@ function add_icon_events() {
 }
 
 </script>
-    </div>
-    <div class="col-sm-2"></div>
-    </div>
-    <div class="row">   
-    <div class="col-sm-2"></div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-</div>
 
-   
+
 </body>
 </html> 
-
-	</body>
-</html>
 
 
