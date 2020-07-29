@@ -3,8 +3,8 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var path = require("path");
 
-var db = require("./models");
-
+var db = require("./models/");
+// var login = require("./routes/login.js");
 var app = express();
 var PORT = process.env.PORT || 3003;
 
@@ -12,6 +12,15 @@ var PORT = process.env.PORT || 3003;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
+// app.use(session({
+// 	secret: 'secret',
+// 	resave: true,
+//   saveUninitialized: true
+// }));
+// app.use(bodyParser.urlencoded({extended : true}));
+
+// app.use(bodyParser.json())
+
 
 // Handlebars
 app.engine(
@@ -25,7 +34,7 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-
+require("./routes/loginRoutes.js")(app);
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true

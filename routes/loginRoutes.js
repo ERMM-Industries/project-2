@@ -3,6 +3,10 @@ var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var path = require('path');
+// var Sequelize = require("sequelize");
+// var config = require(__dirname + "/../config/config.json")[env];
+
+// var login = {};
 
 var connection = mysql.createConnection({
 	host     : 'localhost',
@@ -11,21 +15,26 @@ var connection = mysql.createConnection({
 	database : 'FilmSnob Login'
 });
 
-var app = express();
-app.use(session({
-	secret: 'secret',
-	resave: true,
-	saveUninitialized: true
-}));
-app.use(bodyParser.urlencoded({extended : true}));
-app.use(bodyParser.json());
+// if (config.use_env_variable) {
+//     var sequelize = new Sequelize(process.env[config.use_env_variable]);
+//   } else {
+//     var sequelize = new Sequelize(
+//       config.database,
+//       config.username,
+//       config.password,
+//       config
+//     );
+//   }
+
+module.exports = function(app) {
+
 
 app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '../views/index.handlebars'));
 });
 
 app.post('/auth', function(request, response) {
-	var username = request.body.username;
+    var username = request.body.username;
 	var password = request.body.password;
 	if (username && password) {
 		connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
@@ -54,3 +63,6 @@ app.get('/', function(request, response) {
 });
 
 app.listen(3000);
+}
+
+// module.exports = login;
