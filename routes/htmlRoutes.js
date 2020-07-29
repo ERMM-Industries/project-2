@@ -58,7 +58,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/reviewed/", function(req, res) {
+  app.get("/reviewed", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("reviewed", {
         examples: dbExamples
@@ -89,6 +89,24 @@ module.exports = function(app) {
       dbExample
     ) {
       res.render("watchlist", {
+        example: dbExample
+      });
+    });
+  });
+
+  app.get("/community", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("community", {
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/community/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("community", {
         example: dbExample
       });
     });

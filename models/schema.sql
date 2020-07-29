@@ -1,3 +1,4 @@
+
 CREATE DATABASE IF NOT EXISTS `FilmSnob Login` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `FilmSnob Login`;
 
@@ -11,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `credentials` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 INSERT INTO `credentials` (`username`, `password`, `email`,`first name`,`last name`,`birthday`) VALUES ('test', 'test', 'test@test.com', 'test','test','01/01/01');
+
 
 CREATE TABLE IF NOT EXISTS `accounts` (
   `id` int(11) NOT NULL,
