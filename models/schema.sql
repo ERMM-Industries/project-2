@@ -24,12 +24,12 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `film_rating` varchar(20) NOT NULL,
   `director` varchar(50) NOT NULL,
   `actors` varchar(500) NOT NULL,
-  `date of release` varchar(50) NOT NULL,
+  `release_date` varchar(50) NOT NULL,
   `plot summary` varchar(10000) NOT NULL,
-  `movie status` varchar(100) NOT NULL,
+  `movie_status` varchar(100) NOT NULL,
   `awards` varchar(20) NOT NULL,
-  `Watch Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-  `Review Time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  `watch_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  `review_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   `release_date` varchar(50) NOT NULL,
   `plot_summary` varchar(10000) NOT NULL,
   `account_status` varchar(100) NOT NULL,
