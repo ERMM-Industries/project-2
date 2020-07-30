@@ -57,40 +57,9 @@
   .sidenav a {font-size: 18px;}
 } 
 
-   
-#hold_images {
-display: inline-block; 
-white-space: nowrap;
-}
-#icon_right {
-right: 20; 
-cursor: pointer;  
-margin-top: -200px; 
-position: fixed; 
-}
-#icon_left {
-left: 20; 
-cursor: pointer;  
-margin-top: -200px; 
-position: fixed; 
-}
-.transition {
-    -webkit-transform: scale(1.2); 
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
-img {
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    cursor: pointer; 
-}
-
-.card-img-top {
-    width: 50%;
-    height: 15vw;
+#film_poster {
+    width: 30vw ;
+    height: auto;
 }
 
 .navbar {
@@ -106,10 +75,15 @@ img {
   top: 100px
 }
 
+.card-title{
+  font: bold;
+}
+
+
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">FilmSnob</a>
+  <a class="navbar-brand"  href=""> <img src="https://raw.githubusercontent.com/ERMM-Industries/project-2/admin/public/styles/img/filmSnobLogo2.png" width="120" height="auto" class="d-inline-block align-top" alt="" loading="lazy"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -161,21 +135,27 @@ img {
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-      <h2 class="currentPage">Film Spotlight: <p id="film_title"></p></h2>
+      <h2 class="filmPage">Spotlight: <p id="film_title"></p></h2>
       </div>
   <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-7">
-      <div class="card" style="width: 40rem; ">
-  <img src="https://www.indiewire.com/wp-content/uploads/2019/06/slack-imgs-6.jpg?w=716;" id="film_poster" class="card-img-top;" alt="FilmSnob">
+    <div class="col-sm-6"><div class="card" style="width: 35rem; ">
+  <img src="https://www.hometheaterseattle.com/assets/images/movies/casablanca-movie-1942.jpg" id="film_poster" class="card-img-top;" alt="">
+  
+    </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card" style="width: 35rem; ">
   <div class="card text-center">
   <div class="card-header">
+    <h5 class="card-title" id="film_title">Casablanca</h5>
   </div>
   <div class="card-body">
-    <h5 class="card-title" id="film_title">{Film title to populate here}</h5>
+    
     <a href="#" class="btn btn-primary">Add to watchlist</a>
-  </div>
-  <div class="dropdown">
+    <div class="card-body">
+
+    <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Add award
   </button>
@@ -186,37 +166,42 @@ img {
     <a class="dropdown-item" href="#">Something else here</a>
   </div>
 </div>
+    
+  </div>
+  </div>
+  
+  
 <br>
   <div class="card-footer" id="production">
-    {production goes here}
+    Warner Bros. Pictures
   </div>
 </div>
   <div class="card-body">
-    <h5 class="plot">Plot Summary</h5>
-    <p class="plot_summary">{movie summary will go here}</p>
-  </div>
+    </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Release date: <p class="release_date">{release date to populate here}</p></li>
+    <li class="list-group-item">Plot Summary: <p class="plot_summary">A cynical American expatriate struggles to decide whether or not he should help his former lover and her fugitive husband escape French Morocco.</p></li>
     <br>
-    <li class="list-group-item">Film rating: <p class="film_rating">{film rating here}</p></li>
+    <li class="list-group-item">Release date: <p class="release_date">23 Jan 1943</p></li>
     <br>
-    <li class="list-group-item">Director: <p class="director">{director goes here}</p></li>
+    <li class="list-group-item">Film rating: <p class="film_rating">PG</p></li>
     <br>
-    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+    <li class="list-group-item">Director: <p class="director">Michael Curtiz</p></li>
     <br>
-    <li class="list-group-item">Run time: <p class="run_time">{run time goes here}</p></li>
+    <li class="list-group-item">Actors: <p class="actors">Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains</p></li>
     <br>
-    <li class="list-group-item">Box Office: <p class="box_office">{budget goes here}</p></li>
+    <li class="list-group-item">Run time: <p class="run_time">102 min</p></li>
     <br>
-    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+    <li class="list-group-item">Box Office: <p class="box_office">N/A</p></li>
+    <br>
+    <li class="list-group-item">Awards: <p class="actors">Won 3 Oscars. Another 5 wins & 9 nominations.</p></li>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a href="/watchlist" class="card-link">Watchlist</a>
+    <a href="/reviewed" class="card-link">Reviews</a>
+    <a href="/community" class="card-link">Community</a>
   </div>
     </div>
     </div>
-    <div class="col-sm-3"></div>
     </div>
     <div class="row">
     <div class="col-sm-12">
@@ -232,51 +217,10 @@ img {
 
 
    
-</body>
-</html> 
+
 
 	</body>
 
-
-  {{!-- <script>
-    images = {
-   "1" : "../public/styles/img/1.jpg",
-   "2" : "../public/styles/img/2.jpg",
-   "3" : "img/3.png",
-   "4" : "img/4.png",
-   "5" : "img/5.png",
-   "6" : "img/6.png",   
-   "7" : "img/7.png",
-   "8" : "img/8.png",
-   "9" : "img/9.png",
-   "10" : "img/10.png"
-}
-
-Object.keys(images).forEach(function(path) {
-    $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
-});
-
-$('body').append("<i id='icon_right'></i>");
-$('body').append("<i id='icon_left'></i>"); 
-add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
-add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
-
-$(document).ready(function(){
-    $('.my_img').hover(function() {
-        $(this).addClass('transition');
-
-    }, function() {
-        $(this).removeClass('transition');
-    });
-});
-
-$(document).on('click', '#icon_right, #icon_left', function() {
-    if($(this).attr('id') == 'icon_right') {
-        $('body').animate({scrollLeft: 1000}, 800);
-        } else {
-        $('body').animate({scrollLeft: -1000}, 800);
-    }
-});</script> --}}
 </html>
 
 

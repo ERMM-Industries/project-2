@@ -37,22 +37,27 @@ function displayMovieInfo(movie) {
     $("#actors").text(actors);
 
     // Creates div to hold release date and appends it
+    // eslint-disable-next-line camelcase
     var release_date = response.Released;
     $("#release_date").text(release_date);
 
     // Creates div to hold plot and appends it
+    // eslint-disable-next-line camelcase
     var plot_summary = response.Plot;
     $("#plot_summary").text(plot_summary);
 
     // Creates div to hold box office earnings and appends it
+    // eslint-disable-next-line camelcase
     var box_office = response.BoxOffice;
     $("#box_office").text(box_office);
 
     // Creates div to hold director and appends it
+    // eslint-disable-next-line camelcase
     var film_rating = response.Rated;
     $("#film_rating").text(film_rating);
 
     // Creates div to hold the poster and appends it
+    // eslint-disable-next-line camelcase
     var film_poster = response.Poster;
     $("#film_poster").attr("src", film_poster);
   });
