@@ -53,10 +53,6 @@
   width: 100%;
 }
 
-<<<<<<< HEAD
-td #clone_uTfuvTXpvOzFQ96{
-  width: 90%;
-=======
 /*sidebar nav*/
 body {
   font-family: "Lato", sans-serif;
@@ -95,5 +91,4 @@ body {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
->>>>>>> 9f91153c2e0128f327c0727f7f450c4bd9c4e7ec
 }
