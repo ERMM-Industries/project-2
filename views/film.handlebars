@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	</head>
 	<body id="filmPage">
         
@@ -156,14 +157,16 @@
     <div class="card-body">
 
     <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Add award
+  <button class="dropdown-toggle btn btn-dark span: full" data-toggle="dropdown" type="button span: full" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Awards
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="#">Oscar worthy</a>
     <a class="dropdown-item" href="#">Blockbuster</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Colecting Dust</a>
+    <a class="dropdown-item" href="#">Bargin Bin</a>
+    <a class="dropdown-item" href="#">Dumpster Fire</a>
+    <a class="dropdown-item" href="#">Walked Out</a>
   </div>
 </div>
     
@@ -216,7 +219,11 @@
 </div>
 
 
-   
+   <script>
+     $(document).ready(function(){
+       $('.dropdown-toggle').dropdown()
+     });
+   </script>
 
 
 	</body>
