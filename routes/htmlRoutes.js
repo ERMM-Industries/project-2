@@ -112,6 +112,60 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/login", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("login", {
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/login/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("login", {
+        example: dbExample
+      });
+    });
+  });
+
+  app.get("/new", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("new", {
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/new/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("new", {
+        example: dbExample
+      });
+    });
+  });
+
+  app.get("/indextest", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("indextest", {
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/indextest/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("indextest", {
+        example: dbExample
+      });
+    });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
