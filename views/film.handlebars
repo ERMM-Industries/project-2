@@ -110,8 +110,8 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -136,7 +136,6 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-      <h2 class="filmPage">Spotlight: <p id="film_title"></p></h2>
       </div>
   <div class="row">
     <div class="col-sm-6"><div class="card" style="width: 35rem; ">
@@ -182,21 +181,21 @@
   <div class="card-body">
     </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Plot Summary: <p class="plot_summary">A cynical American expatriate struggles to decide whether or not he should help his former lover and her fugitive husband escape French Morocco.</p></li>
+    <li class="list-group-item">Plot Summary: <p id="plot_summary">A cynical American expatriate struggles to decide whether or not he should help his former lover and her fugitive husband escape French Morocco.</p></li>
     <br>
-    <li class="list-group-item">Release date: <p class="release_date">23 Jan 1943</p></li>
+    <li class="list-group-item">Release date: <p id="release_date">23 Jan 1943</p></li>
     <br>
-    <li class="list-group-item">Film rating: <p class="film_rating">PG</p></li>
+    <li class="list-group-item">Film rating: <p id="film_rating">PG</p></li>
     <br>
-    <li class="list-group-item">Director: <p class="director">Michael Curtiz</p></li>
+    <li class="list-group-item">Director: <p id="director">Michael Curtiz</p></li>
     <br>
-    <li class="list-group-item">Actors: <p class="actors">Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains</p></li>
+    <li class="list-group-item">Actors: <p id="actors">Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains</p></li>
     <br>
-    <li class="list-group-item">Run time: <p class="run_time">102 min</p></li>
+    <li class="list-group-item">Run time: <p id="run_time">102 min</p></li>
     <br>
-    <li class="list-group-item">Box Office: <p class="box_office">N/A</p></li>
+    <li class="list-group-item">Box Office: <p id="box_office">N/A</p></li>
     <br>
-    <li class="list-group-item">Awards: <p class="actors">Won 3 Oscars. Another 5 wins & 9 nominations.</p></li>
+    <li class="list-group-item">Awards: <p id="awards">Won 3 Oscars. Another 5 wins & 9 nominations.</p></li>
   </ul>
   <div class="card-body">
     <a href="/watchlist" class="card-link">Watchlist</a>
