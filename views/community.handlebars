@@ -61,7 +61,7 @@
 } 
 
 #film_poster {
-    width: 25vw ;
+    width: 28vw ;
     height: auto;
     align-content: center;
 }
@@ -188,7 +188,7 @@ input[type="file"]{
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/account">Home</a>
       </li>
       <li class="nav-item">
@@ -197,7 +197,7 @@ input[type="file"]{
           <li class="nav-item">
         <a class="nav-link" href="/reviewed">Reviews</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/community">Community<span class="sr-only">(current)</span></a>
       </li>
         </div>
@@ -233,7 +233,7 @@ input[type="file"]{
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-      <h2 class="filmPage">Community comments: <p id="awards"></p></h2>
+      <h2 class="filmPage"><p id="awards"></p></h2>
       </div>
   <div class="row">
     <div class="col-sm-12"><div class="card" style="width: 49rem; ">
@@ -244,14 +244,16 @@ input[type="file"]{
     
 
     <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button span: full" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Collecting Dust
+  <button class="dropdown-toggle btn btn-dark span: full" data-toggle="dropdown" type="button span: full" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Awards
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="#">Oscar worthy</a>
     <a class="dropdown-item" href="#">Blockbuster</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Colecting Dust</a>
+    <a class="dropdown-item" href="#">Bargin Bin</a>
+    <a class="dropdown-item" href="#">Dumpster Fire</a>
+    <a class="dropdown-item" href="#">Walked Out</a>
   </div>
 </div>
     
@@ -731,7 +733,11 @@ input[type="file"]{
 </div>
 
 
-   
+   <script>
+     $(document).ready(function(){
+       $('.dropdown-toggle').dropdown()
+     });
+   </script>
 
 
 	</body>
