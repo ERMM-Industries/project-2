@@ -64,7 +64,7 @@ body {
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">FilmSnob</a>
+  <a class="navbar-brand"  href=""> <img src="https://raw.githubusercontent.com/ERMM-Industries/project-2/admin/public/styles/img/filmSnobLogo2.png" width="120" height="auto" class="d-inline-block align-top" alt="" loading="lazy"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -78,7 +78,7 @@ body {
         <a class="nav-link" href="/film/:id">Watchlist</a>
       </li>
           <li class="nav-item">
-        <a class="nav-link" href="/revieweded">revieweds</a>
+        <a class="nav-link" href="/reviewed">Reviews</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/community">Community</a>
@@ -160,7 +160,7 @@ create_azle(function() {
         "width": "100px",
         "padding": "20px"
     })
-    hold_titles = ['Home', 'Watchlist', 'revieweded', 'Updates']
+    hold_titles = ['Home', 'Watchlist', 'reviewed', 'Updates']
     az.call_multiple({
         "iterations": hold_titles.length,
         "function": `
