@@ -230,53 +230,47 @@ img {
   </div>
 
 
+    <script>
+        images = {
+      "1" : "../public/styles/img/1.jpg",
+      "2" : "../public/styles/img/2.jpg",
+      "3" : "img/3.png",
+      "4" : "img/4.png",
+      "5" : "img/5.png",
+      "6" : "img/6.png",   
+      "7" : "img/7.png",
+      "8" : "img/8.png",
+      "9" : "img/9.png",
+      "10" : "img/10.png"
+    }
 
+    Object.keys(images).forEach(function(path) {
+        $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
+    });
+
+    $('body').append("<i id='icon_right'></i>");
+    $('body').append("<i id='icon_left'></i>"); 
+    add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
+    add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
+
+    $(document).ready(function(){
+        $('.my_img').hover(function() {
+            $(this).addClass('transition');
+
+        }, function() {
+            $(this).removeClass('transition');
+        });
+    });
+
+    $(document).on('click', '#icon_right, #icon_left', function() {
+        if($(this).attr('id') == 'icon_right') {
+            $('body').animate({scrollLeft: 1000}, 800);
+            } else {
+            $('body').animate({scrollLeft: -1000}, 800);
+        }
+    });</script>
    
 </body>
 </html> 
-
-	</body>
-
-
-  {{!-- <script>
-    images = {
-   "1" : "../public/styles/img/1.jpg",
-   "2" : "../public/styles/img/2.jpg",
-   "3" : "img/3.png",
-   "4" : "img/4.png",
-   "5" : "img/5.png",
-   "6" : "img/6.png",   
-   "7" : "img/7.png",
-   "8" : "img/8.png",
-   "9" : "img/9.png",
-   "10" : "img/10.png"
-}
-
-Object.keys(images).forEach(function(path) {
-    $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
-});
-
-$('body').append("<i id='icon_right'></i>");
-$('body').append("<i id='icon_left'></i>"); 
-add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
-add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
-
-$(document).ready(function(){
-    $('.my_img').hover(function() {
-        $(this).addClass('transition');
-
-    }, function() {
-        $(this).removeClass('transition');
-    });
-});
-
-$(document).on('click', '#icon_right, #icon_left', function() {
-    if($(this).attr('id') == 'icon_right') {
-        $('body').animate({scrollLeft: 1000}, 800);
-        } else {
-        $('body').animate({scrollLeft: -1000}, 800);
-    }
-});</script> --}}
-</html>
 
 
