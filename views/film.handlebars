@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	</head>
 	<body id="filmPage">
         
@@ -57,40 +58,9 @@
   .sidenav a {font-size: 18px;}
 } 
 
-   
-#hold_images {
-display: inline-block; 
-white-space: nowrap;
-}
-#icon_right {
-right: 20; 
-cursor: pointer;  
-margin-top: -200px; 
-position: fixed; 
-}
-#icon_left {
-left: 20; 
-cursor: pointer;  
-margin-top: -200px; 
-position: fixed; 
-}
-.transition {
-    -webkit-transform: scale(1.2); 
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
-img {
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    cursor: pointer; 
-}
-
-.card-img-top {
-    width: 50%;
-    height: 15vw;
+#film_poster {
+    width: 30vw ;
+    height: auto;
 }
 
 .navbar {
@@ -106,10 +76,15 @@ img {
   top: 100px
 }
 
+.card-title{
+  font: bold;
+}
+
+
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">FilmSnob</a>
+  <a class="navbar-brand"  href=""> <img src="https://raw.githubusercontent.com/ERMM-Industries/project-2/admin/public/styles/img/filmSnobLogo2.png" width="120" height="auto" class="d-inline-block align-top" alt="" loading="lazy"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -123,7 +98,7 @@ img {
         <a class="nav-link" href="/watchlist">Watchlist</a>
       </li>
           <li class="nav-item">
-        <a class="nav-link" href="/revieweded">revieweds</a>
+        <a class="nav-link" href="/reviewed">Reviews</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/community">Community</a>
@@ -135,8 +110,8 @@ img {
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -161,62 +136,74 @@ img {
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-      <h2 class="currentPage">Film Spotlight: <p id="film_title"></p></h2>
       </div>
   <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-7">
-      <div class="card" style="width: 40rem; ">
-  <img src="https://www.indiewire.com/wp-content/uploads/2019/06/slack-imgs-6.jpg?w=716;" id="film_poster" class="card-img-top;" alt="FilmSnob">
+    <div class="col-sm-6"><div class="card" style="width: 35rem; ">
+  <img src="https://www.hometheaterseattle.com/assets/images/movies/casablanca-movie-1942.jpg" id="film_poster" class="card-img-top;" alt="">
+  
+    </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card" style="width: 35rem; ">
   <div class="card text-center">
   <div class="card-header">
+    <h5 class="card-title" id="film_title">Casablanca</h5>
   </div>
   <div class="card-body">
-    <h5 class="card-title" id="film_title">{Film title to populate here}</h5>
+    
     <a href="#" class="btn btn-primary">Add to watchlist</a>
-  </div>
-  <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Add award
+    <div class="card-body">
+
+    <div class="dropdown">
+  <button class="dropdown-toggle btn btn-dark span: full" data-toggle="dropdown" type="button span: full" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Awards
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="#">Oscar worthy</a>
     <a class="dropdown-item" href="#">Blockbuster</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Colecting Dust</a>
+    <a class="dropdown-item" href="#">Bargin Bin</a>
+    <a class="dropdown-item" href="#">Dumpster Fire</a>
+    <a class="dropdown-item" href="#">Walked Out</a>
   </div>
 </div>
+    
+  </div>
+  </div>
+  
+  
 <br>
   <div class="card-footer" id="production">
-    {production goes here}
+    Warner Bros. Pictures
   </div>
 </div>
   <div class="card-body">
-    <h5 class="plot">Plot Summary</h5>
-    <p class="plot_summary">{movie summary will go here}</p>
-  </div>
+    </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Release date: <p class="release_date">{release date to populate here}</p></li>
+    <li class="list-group-item">Plot Summary: <p id="plot_summary">A cynical American expatriate struggles to decide whether or not he should help his former lover and her fugitive husband escape French Morocco.</p></li>
     <br>
-    <li class="list-group-item">Film rating: <p class="film_rating">{film rating here}</p></li>
+    <li class="list-group-item">Release date: <p id="release_date">23 Jan 1943</p></li>
     <br>
-    <li class="list-group-item">Director: <p class="director">{director goes here}</p></li>
+    <li class="list-group-item">Film rating: <p id="film_rating">PG</p></li>
     <br>
-    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+    <li class="list-group-item">Director: <p id="director">Michael Curtiz</p></li>
     <br>
-    <li class="list-group-item">Run time: <p class="run_time">{run time goes here}</p></li>
+    <li class="list-group-item">Actors: <p id="actors">Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains</p></li>
     <br>
-    <li class="list-group-item">Box Office: <p class="box_office">{budget goes here}</p></li>
+    <li class="list-group-item">Run time: <p id="run_time">102 min</p></li>
     <br>
-    <li class="list-group-item">Actors: <p class="actors">{actors list goes here}</p></li>
+    <li class="list-group-item">Box Office: <p id="box_office">N/A</p></li>
+    <br>
+    <li class="list-group-item">Awards: <p id="awards">Won 3 Oscars. Another 5 wins & 9 nominations.</p></li>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a href="/watchlist" class="card-link">Watchlist</a>
+    <a href="/reviewed" class="card-link">Reviews</a>
+    <a href="/community" class="card-link">Community</a>
   </div>
     </div>
     </div>
-    <div class="col-sm-3"></div>
     </div>
     <div class="row">
     <div class="col-sm-12">
@@ -228,8 +215,10 @@ img {
     </div>
     </div>
   </div>
+</div>
 
 
+<<<<<<< HEAD
     <script>
         images = {
       "1" : "../public/styles/img/1.jpg",
@@ -272,5 +261,17 @@ img {
    
 </body>
 </html> 
+=======
+   <script>
+     $(document).ready(function(){
+       $('.dropdown-toggle').dropdown()
+     });
+   </script>
+
+
+	</body>
+
+</html>
+>>>>>>> 9ca02b6ee997270d81a71260e225e0e57e1f6a23
 
 
