@@ -67,6 +67,7 @@ body {
 .columnGrid {
   flex: 50%;
   padding: 0 4px;
+  
 }
 
 .columnGrid img {
@@ -74,7 +75,14 @@ body {
   vertical-align: middle;
   width: auto;
   height: 200px;
+  transition: transform .2s; /* Animation */
 }
+
+.columnGrid img:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
 
 .rowGrid {
   margin-top: 80px;
@@ -149,54 +157,31 @@ body {
             <div class="col-sm-1"></div>
             <div class="col-sm-11">
             <div class="rowGrid">
-  <div class="columnGrid">
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-  </div>
-  {{!-- <div class="columnGrid">
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-  </div>
-  <div class="columnGrid">
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-  </div>
-  <div class="columnGrid">
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-    <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
-  </div> --}}
-</div>
+ 
+    <div class="columnGrid">
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+      <img class="btn" src="https://images-na.ssl-images-amazon.com/images/I/91sustfojBL._AC_SL1500_.jpg"> 
+    
+    </div>
+
             </div>
             
             <div class="col-sm-0">
