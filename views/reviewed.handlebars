@@ -73,8 +73,13 @@ body {
 .columnGrid img {
   margin-top: 8px;
   vertical-align: middle;
-  width: 200px;
-  height: auto;
+  width: auto;
+  height: 220px;
+  transition: transform .2s; /* Animation */
+}
+
+.columnGrid img:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .rowGrid {
