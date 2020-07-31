@@ -1,6 +1,11 @@
 {
   "name": "project-2",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+
+  },
   "description": "Project 2 Starter",
   "main": "server.js",
   "scripts": {
@@ -8,6 +13,7 @@
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
     "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    
   },
   "license": "ISC",
   "dependencies": {
@@ -43,3 +49,4 @@
   },
   "homepage": "https://github.com/ERMM-Industries/project-2#readme"
 }
+
